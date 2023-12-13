@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": true,
+  "phpcs.standard": "./phpcs.xml",
+  "phpcs.executablePath": "./vendor/squizlabs/php_codesniffer/bin/phpcs"
+}
