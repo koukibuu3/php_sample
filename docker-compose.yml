@@ -1,11 +1,31 @@
-version: '3.8'
+version: "3.8"
 
 services:
   web:
-    image: php:8.3.0-apache
+    build:
+      context: .
+      dockerfile: web.Dockerfile
     ports:
       - 8000:80
     volumes:
-      - ./src:/var/www/html
+      - ./:/var/www/html
     stdin_open: true
     tty: true
+    depends_on:
+      - database
+
+  database:
+    image: mysql:8.1.0
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
