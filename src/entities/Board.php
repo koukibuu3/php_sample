@@ -43,6 +43,17 @@ final class Board
     }
 
     /**
+     * ビンゴカードを再生成する
+     *
+     * @param string $owner
+     * @param Line[] $lines
+     */
+    public function recreate(string $owner, array $lines): self
+    {
+        return new self($owner, $lines);
+    }
+
+    /**
      * ビンゴの数を計算する
      *
      * @param Line[] $lines
