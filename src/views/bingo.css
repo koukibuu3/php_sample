@@ -1,0 +1,58 @@
+h1 {
+  padding: 10px;
+}
+
+/* ボタン */
+
+.button-container {
+  margin: 10px;
+  display: flex;
+}
+
+.button-container form {
+  margin: 0 10px;
+}
+
+.button-container input[type="text"] {
+  padding: 0.3em;
+}
+
+.bingo-card-container {
+  margin: 10px;
+}
+
+/* ビンゴカード */
+
+.bingo-card {
+  display: inline-block;
+}
+
+.bingo-card h2 {
+  padding: 0 10px;
+}
+
+.bingo-card table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 10px;
+  border: 1px solid #ddd;
+}
+
+.bingo-card th, td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.bingo-card ul {
+  padding-inline-start: 10px;
+}
+
+.bingo-card li {
+  list-style: none;
+}
+
+.bingo-card-hit {
+  background-color: black;
+  color: gray;
+}
